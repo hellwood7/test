@@ -1,0 +1,17 @@
+#box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: blue;
+    margin-bottom: 10px;
+}
+.divfirst {
+    width: 100px;
+    height: 50px;
+    background-color: black;
+}
