@@ -20,5 +20,21 @@ console.log(divFirst);
  document.body.appendChild(divFirst); // Выбираем документ, родительский селектор (body) и в конец него вставляем наш div с классом divFirst
  document.body.insertBefore(divSecond, circle[0]); // Добавить divSecond после первого эллемента в circle
  document.body.removeChild(circle[1]); // Удаляем второй эллемент из circle (Относится только для дочернего элемента), Дочерний элемент circle по отношению к body
- 
+ wrapper.removeChild(heart[1]); // Выбираем класс wrapper, после чего удаляем 2 эллемент из .wrapper .heart
+ document.body.replaceChild(btn[1], circle[1]); // Мы заменяем 2 эллемент из btn на 2 эллемент из circle
+
+divFirst.innerHTML = 'Hello World'; // Мы добавляем в divFirst меседж Hello World
+divFirst.innerHTML = '<h1>Hello World</h1>' // Стилизация прошлого свойства под h1
+divFirst.textContent = 'Hello World'; // Такая конструкция тоже приветствуется, аналогична первой записи с выводом
 // УРОКИ JS ДЛЯ ПЕРВОГО КУРСА
+
+
+
+// GIT
+// git cd - сменить репозиторий
+// git init - запустить git
+// git status - проверить статус файлов в репозитории
+// git add -A - добавить все файлы под комит
+// git add index.html - добавить отдельный файл
+// git add *.html - добавить все файлы, оканчивающиеся на .html
+// git commit -a -m"first commit" - комитим файлы (a - все файлы, m - сообщение о комите)
