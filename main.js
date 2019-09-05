@@ -68,4 +68,54 @@ link.addEventListener('click', function(event) {
 // });
 // Такую операцию мы используем, когда нам нужно выбрать все элементы и провести с ними операцию!!!
 
+
+// NEXT THEME ---------------------------------------------------------------------------------------------------------------------------
+
+
+let timerId =  setTimeout(sayHello, 3000,); // Задаем переменной timerId задержку в 3000 миллисекунд, перед ней идет функция sayHello, в которой будет позже записано действие
+// clearTimeout(timerId); // Используется для остановки действия setTimeout
+function sayHello() {
+    alert('Hello World'); // Действие 
+}
+
+let repeat = setInterval(banner, 5000);
+function banner() {
+    console.log('Banner Hello World');
+}          // Тоже самое, что и Timeout, но интервал, которы будет потворятся через кажды заданный промежуток времени
+
+
+let btn = document.querySelector('.btn');
+    element = document.querySelector('.box');
+
+function myAnimation() {
+    let position = 0;
+
+    let id = setInterval(frame, 10);
+    function frame() {
+        if (position == 300) {
+            clearInterval(id);
+        } else {
+            position++;
+            element.style.top = position + 'px';
+            element.style.left = position + 'px';
+        }
+    }
+}
+
+btn.addEventListener('click', myAnimation); //  Простейщая анимация с передвижением блока по касательной
+
+// Напишем функцию, которая будет писать в консоль при нажатии на одну из кнопок
+
+let btnBlock = document.querySelector('.btn-block'), // Выбираем родмтельский элемент, в котором находятся кнопки
+    btns = document.getElementsByTagName('button'); // Выбираем все кнопки
+
+btnBlock.addEventListener('click', function(event) {  // Задаем для кнопок событие 
+    if (event.target && event.target.tagName == 'BUTTON') { // Если target и тэг target это button то выводим в консоль
+        // event.target.matches('button.first') - применяется для target'a класса first в button (Выбираются все элементы)
+        console.log('Hello!');
+    }
+});
+
+
+
 // УРОКИ JS ДЛЯ ПЕРВОГО КУРСА
